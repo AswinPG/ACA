@@ -67,6 +67,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomEntryRenderer.cs" />
     <Compile Include="Interfaces\FireBaseAuthenticator.cs" />
     <Compile Include="Interfaces\GoogleAuthenticator.cs" />
     <Compile Include="MainActivity.cs" />
