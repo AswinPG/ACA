@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACA.Anjana.Authentication.Interfaces
 {
-    interface IFireBaseAuthenticator
+    public interface IFireBaseAuthenticator
     {
         Task<AppUser> LoginWithGoogle(string idTok, string accesTok);
     }

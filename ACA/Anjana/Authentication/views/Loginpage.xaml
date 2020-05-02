@@ -4,14 +4,51 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ACA.Anjana.Authentication.views.Loginpage">
+             x:Class="ACA.Anjana.Authentication.views.Loginpage"
+             >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Click Here"
-                  FontSize="Large"/>
-            <Button Text="Login"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="backgroundimg.png"
+                   Aspect="AspectFill"
+                   Grid.Row="0"/>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="0">
+                <Image Source="lightone.png"
+                       VerticalOptions="Start"/>
+                <Image Source="lighttwo.png"
+                       VerticalOptions="Start"/>
+                <Image Source="clock.png"
+                       VerticalOptions="Start"
+                       HorizontalOptions="End"/>
+                
+            </StackLayout>
+            <Label Text="Login"
+                   Grid.Row="0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+            <Frame Grid.Row="1"
+                   VerticalOptions="Start">
+                <StackLayout>
+                <Entry Placeholder="Email or Phone Number"/>
+                <Entry Placeholder="Password"/>
+                </StackLayout>
+            </Frame>
+            <Button Grid.Row="1"
+                    Text="LOGIN"
+                    VerticalOptions="Center"
                     Clicked="Login"/>
-           
-        </StackLayout>
+            <Label Grid.Row="1"
+                   Text="Forget Password?"
+                   VerticalOptions="End"
+                   HorizontalOptions="Center"/>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

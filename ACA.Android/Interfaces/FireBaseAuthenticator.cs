@@ -4,6 +4,7 @@ using System.Linq;
 
 using System.Text;
 using System.Threading.Tasks;
+using ACA.Anjana.Authentication.Interfaces;
 using ACA.Anjana.Authentication.Model;
 using ACA.Droid.Interfaces;
 using Android.App;
