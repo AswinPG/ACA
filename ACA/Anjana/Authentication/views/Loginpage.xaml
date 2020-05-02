@@ -11,6 +11,7 @@
                   FontSize="Large"/>
             <Button Text="Login"
                     Clicked="Login"/>
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

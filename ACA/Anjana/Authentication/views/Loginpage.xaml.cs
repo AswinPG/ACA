@@ -15,6 +15,8 @@ namespace ACA.Anjana.Authentication.views
     public partial class Loginpage : ContentPage
     {
         public static IGoogleAuthenticator _googleManager = DependencyService.Get<IGoogleAuthenticator>();
+        private object googleUser;
+
         public GoogleUser GoogleUser { get; private set; }
         public bool IsLogedIn { get; private set; }
         public Loginpage()
@@ -24,12 +26,49 @@ namespace ACA.Anjana.Authentication.views
         
         public async void Login(object sender, EventArgs e)
         {
-            _googleManager.Login(OnLoginComplete);
+            try
+            {
+                
+                _googleManager.Logout();
+                _googleManager.Login(OnLoginComplete);
+
+            }
+            catch (Exception x)
+            {
+                
+                await DisplayAlert("Authentication Failed", "Your Authentication Attempt Failed. Please try again..", "Ok");
+            }
         }
 
-        private void OnLoginComplete(GoogleUser arg1, string arg2)
+       
+
+        private async void OnLoginComplete(GoogleUser googleUser, string message)
         {
-        //    throw new NotImplementedException();
+            if (googleUser != null)
+            {
+                GoogleUser = googleUser;
+                try
+                {
+                    AppUser User = await DependencyService.Get<IFireBaseAuthenticator>().LoginWithGoogle(googleUser.Token, null);
+                    //Application.Current.Properties["User"] = User.Uid;
+                }
+                catch (Exception e)
+                {
+                    await DisplayAlert("Oops", "Firebase Error", "Ok");
+                    
+                }
+
+                IsLogedIn = true;
+                await DisplayAlert("Success", message, "Ok");
+                
+            }
+            else
+            {
+                
+                await DisplayAlert("Error", message, "Ok");
+            }
         }
+
+        
     }
 }

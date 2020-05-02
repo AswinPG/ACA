@@ -34,7 +34,7 @@ namespace ACA.Droid.Interfaces
             Instance = this;
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
                                                              .RequestEmail()
-                                                             .RequestIdToken("1041337962968-79cpkpm7um9andvp6s3gc8d9kj68pl98.apps.googleusercontent.com")
+                                                             .RequestIdToken("642946813270-r7ir9thcmbb2ppt5f4j312q9qosgiaqh.apps.googleusercontent.com")
                                                              .Build();
 
             _googleApiClient = new GoogleApiClient.Builder(((MainActivity)Forms.Context).ApplicationContext)
@@ -70,7 +70,7 @@ namespace ACA.Droid.Interfaces
                     Name = accountt.DisplayName,
                     Email = accountt.Email,
                     Picture = new Uri((accountt.PhotoUrl != null ? $"{accountt.PhotoUrl}" : $"https://autisticdating.net/imgs/profile-placeholder.jpg")),
-                    token = accountt.IdToken
+                    Token = accountt.IdToken
                 }, string.Empty);
             }
             else
