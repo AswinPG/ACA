@@ -10,7 +10,7 @@ namespace ACA
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ACA.Anjana.Authentication.views.Loginpage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "642946813270",
+    "firebase_url": "https://acatry-998cb.firebaseio.com",
+    "project_id": "acatry-998cb",
+    "storage_bucket": "acatry-998cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642946813270:android:b1dd9008e050f093a31af7",
+        "android_client_info": {
+          "package_name": "com.anjana.aca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642946813270-6g3gpfuukhft7n20a82gmni8k2sh71bg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anjana.aca",
+            "certificate_hash": "4c821db4cf6ecfb5cb5b48447e22060bb0d7785f"
+          }
+        },
+        {
+          "client_id": "642946813270-r7ir9thcmbb2ppt5f4j312q9qosgiaqh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlPlDDE42Apbx4HKaj1MSYfSh4BjFwG8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642946813270-r7ir9thcmbb2ppt5f4j312q9qosgiaqh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

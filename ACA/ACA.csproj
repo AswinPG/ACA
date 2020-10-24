@@ -16,8 +16,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Anjana\" />
     <Folder Include="Aysha\" />
     <Folder Include="Chalavara\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Anjana\Authentication\views\Loginpage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Anjana\Authentication\views\Loginpage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>
